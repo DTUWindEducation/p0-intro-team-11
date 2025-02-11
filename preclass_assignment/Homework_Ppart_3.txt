@@ -1,0 +1,30 @@
+
+01.	What is the difference between git and GitLab?
+		- Git is a software and GitLab is a online hosting service.  
+  	
+02.	What is the difference between GitLab, GitHub, and BitBucket?  
+		- Different types of server providers
+	
+03.	Why would I ever want to use git, but not GitLab?
+		-	If I only work on a project alone or don't want to upload any data for other reasons
+04.	What are the steps to update the GitLab server with some changes I made on my computer? 
+		- git status	
+		- git add *
+		- git commit -m 'commit note'
+		- git push
+05.	What is a branch and why would I use one?
+		- It is a copy of the git rep, which allowes to work on a repo without changing the original 
+06.	How could you visualize a branch with 3 commits, and then another branch that breaks off after the second commit and has a single commit?
+		- with lines
+07.	Give an example of a set of git commands that would result in a merge conflict.
+		- two git cimmits and pushes on the same file
+08.	Is Git suitable for latex documents?  
+		- yes
+09.	Should I from now on version my word and powerpoint slides using git? Why/why not?
+		- git is not suppose to use with pdf, word, powerpoint. This would result in a lot storage use for the version control
+10.	What could happen when I push my latest commit to the remote repository without pulling first?
+		- There may be missing changes and I can get an conflict.
+11.	What happens when I pull without commiting my local changes first?
+		- they changes in files and can merge (default) or I get a conflict. 
+12.	What is the difference between branching and forking?
+		- branches are copies within the repository, a fork is a copy of the repository - resultng a new repository
