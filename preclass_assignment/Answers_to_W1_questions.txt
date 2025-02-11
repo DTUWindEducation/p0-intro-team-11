@@ -1,0 +1,89 @@
+1. What is the difference between git and GitLab?
+
+	Git = version control system (=vcs) that tracks changes in code on your own computer
+
+	GitLab = Microsoft platform that hosts Git repos online
+
+
+
+2. What is the difference between GitLab, GitHub, and BitBucket?
+
+	all three are for Git repositories
+
+	GitLab: free private repositories and built-in continuous integration
+
+	GitHub: main platform, lots of people
+
+	BitBucket: for stuff like Jira (???), free private repositories
+
+
+
+3. Why would I ever want to use git, but not GitLab?
+
+	For working just on the personal laptop, not share to the world
+
+
+
+4. What are the steps to update the GitLab server with some changes I made on my computer?
+
+	Assuming the repo is already created:
+
+	i. git add .
+	ii. git commit -m "Some message"
+	iii. git push origin main (or otehr branch)
+
+
+
+5. What is a branch and why would I use one?
+
+	branch = separate workspace within the bigger project where one can make changes without affecting the main code that I want  to keep
+
+	Used to: try out new features, fix minor bugs, collaborate without conflicts due to simultaneous pushing
+
+
+
+7. Give an example of a set of git commands that would result in a merge conflict.
+
+	Two branching out, modifying both the main and the branch and trying to merge
+
+	i. git checkout -b feature-branch
+	ii. git commit -am "Change in secondary branch"
+	iii. git checkout main
+	iv. git commit -am "Change in main"
+	v. git merge feature-branch
+
+
+
+8. Is Git suitable for LaTeX documents?
+
+	Yes. LaTeX is just code, not different than other languages. It just produces PDFs.
+
+
+
+9. Should I from now on version my Word and PowerPoint slides using git? Why/why not?
+
+	No, because those are types of binary files, big and difficult to swallow by the algorithm (explained in the video)
+
+
+
+10. What could happen when I push my latest commit to the remote repository without pulling first?
+
+	Nothing, if no one modified anything since last time I pushed
+	If someone intervened, I’ll need to pull first, resolve conflicts, and push again.
+
+
+
+11. What happens when I pull without committing my local changes first?
+
+	Git will try to merge the pulled changes with your local ones
+	If there’s a conflict, Git will stop and ask to fix it (if no --force)
+	If no conflicts, changes will merge automatically
+
+
+
+12. What is the difference between branching and forking?
+
+	Branching = happens within the same repository. Used to work on features or fixes without affecting the main flow.
+
+	Forking = copy of someone else’s repository to my own account (like cloning, but on GitHub/GitLab)
+
