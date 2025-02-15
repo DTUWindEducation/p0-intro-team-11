@@ -1,10 +1,15 @@
-def say_hello(name):
+import numpy as np
+
+def greet():
     """Return a greeting to the user."""
-    return f"Hello {name}!"
+    return "Hello, world!\n"
 
 def square(num):
     """Return the square of a number."""
     return num ** 2
+
+def square_list(list):
+    return np.square(list)
 
 def sqrt(num):
     """Return the square root of a number."""
@@ -72,3 +77,15 @@ def evaluate_line_numpy(a, b, x):
 def evaluate_parabola_numpy(x, a=1, b=1, c=1):
     x = np.array(x)
     return a*x**2 + b*x + c
+
+def fibonacci_stop(N_max):
+    """Return the first 15 numbers in the Fibonacci sequence."""
+    fibonacci = list()
+    for n in range(N_max+1):
+        if n == 0:
+            fibonacci.append(0)
+        if n == 1:
+            fibonacci.append(1)
+        elif n > 1:
+            fibonacci.append(fibonacci[-1] + fibonacci[-2])
+    return fibonacci

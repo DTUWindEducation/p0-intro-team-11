@@ -1,4 +1,7 @@
-import functions as f
+import functions as fxn
+import numpy as np
+
 if __name__ == "__main__":
-    input_name = input("Input your name: ")
-    print(f.say_hello(input_name)) 
+    print(fxn.greet()) 
+    res = fxn.fibonacci_stop(5)
+    print(res)
