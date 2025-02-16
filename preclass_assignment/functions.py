@@ -60,11 +60,11 @@ def fibonacci_stop(max_value):
 # list of the pitch angle, where “good” values are untouched and “bad” values are set to -999.
 
 def clean_pitch(x, status):
-    
-    #Parameters:
-    #- x (list of float): Recorded pitch angles.
-    #- status (list of int): Corresponding status signals (0 = normal, >0 = malfunctioning).
-    
+    '''Clean pitch angle data by setting bad values to -999.
+    Parameters:
+    - x (list of float): Recorded pitch angles.
+    - status (list of int): Corresponding status signals (0 = normal, >0 = malfunctioning).
+    '''
     cleaned_data = [] #initializing to store cleaned pitch angles
 
     for angle, stat in zip(x, status): #angle represents the pitch angle. stat represents the corresponding status signal.
