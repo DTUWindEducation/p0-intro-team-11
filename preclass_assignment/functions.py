@@ -8,8 +8,9 @@ def square(num):
     """Return the square of a number."""
     return num ** 2
 
-def square_list(list):
-    return np.square(list)
+def square_list(num_list):
+    """Return the square of each number in a list."""
+    return [num**2 for num in num_list]
 
 def sqrt(num):
     """Return the square root of a number."""
@@ -32,7 +33,7 @@ def evaluate_line_list(a, b, inputs):
     outputs = [None] * len(inputs)  # initialize our output list
     for index, x in enumerate(inputs):  # loop over our list of inputs, and use enumerate to get both the index and element
         y = evaluate_line(a, b, x)  # call the evaluate_line function from above
-        outputs[index] = y  # assing the output to our output list
+        outputs[index] = y  # assign the output to our output list
     return outputs  # return the list
 
 def evaluate_parabola_list(xs, a=1, b=1, c=1):
@@ -46,7 +47,7 @@ def evaluate_parabola_list(xs, a=1, b=1, c=1):
 # Place the plotting code into a function so we can re-use it in later cells without copy-pasting
 def plot_lines(x, y1, y2, label1, label2):
     """Make a function to plot two lines."""
-    fig, ax = plt.subplots(figsize=(5, 3.5))  # initalize a figure and axes, specifying the aspect ratio
+    fig, ax = plt.subplots(figsize=(5, 3.5))  # initialize a figure and axes, specifying the aspect ratio
 
     ax.plot(x, y1, label=label1)  # plot the line data, and give it a label for the legend
     ax.plot(x, y2, linestyle='--', label=label2)  # plot the parabola data, making it a dashed line and giving a label
@@ -74,9 +75,10 @@ def evaluate_line_numpy(a, b, x):
     y = a*x + b  # evaluate line. no need for a for loop anymore!
     return y
 
-def evaluate_parabola_numpy(x, a=1, b=1, c=1):
-    x = np.array(x)
-    return a*x**2 + b*x + c
+def evaluate_parabola_numpy(xs, a=1, b=1, c=1):
+    """Evaluate a parabola y = a*x^2 + b*x + c using NumPy."""
+    f = lambda x: a*x**2 + b*x + c
+    return [f(x) for x in xs]
 
 def fibonacci_stop(N_max):
     """Return the first 15 numbers in the Fibonacci sequence."""
